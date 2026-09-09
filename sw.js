@@ -1,5 +1,5 @@
 /* 抓牌 PWA service worker：只快取殼層檔案；抓牌.html 走網路優先，離線才用快取 */
-const CACHE = "zhuapai-v3";
+const CACHE = "zhuapai-v4";
 const SHELL = ["./index.html","./manifest.json","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./icons/apple-touch-icon.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
