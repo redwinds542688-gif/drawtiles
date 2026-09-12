@@ -1,16 +1,19 @@
 {
-  "name": "抓牌終極",
+  "name": "抓牌終極 - 名揚四海彩券系統",
   "short_name": "抓牌終極",
+  "description": "名揚四海彩券系統：539／六合彩／天天樂／大樂透 開獎歷史紀錄與抓牌工具",
   "start_url": "./index.html",
   "scope": "./",
+  "id": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#111111",
-  "theme_color": "#111111",
+  "background_color": "#121212",
+  "theme_color": "#121212",
   "lang": "zh-Hant",
   "icons": [
-    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "./icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
