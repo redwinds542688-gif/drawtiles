@@ -2060,6 +2060,12 @@ body.theme-dark table.road td.wd .badge{ background:transparent; color:#e6e6e6; 
   /* 星期一：格子用較深的黑 #0d0d0d 當分隔(同抓539)，徽章透明底白字 */
 body.theme-dark table.road td.wd.mon-cell{ background:#0d0d0d; color:#e6e6e6; }
 body.theme-dark table.road td.wd.mon-cell .badge.mon{ background:transparent; color:#e6e6e6; }
+/* 2026-10-03 使用者指示「所有星期的顏色明暗顯示與日期顯示一致」：星期字色＝日期字色(亮色 #555、暗色 #9a9a9a)；未開獎列跟日期一樣用未來色(亮色 #555、暗色 #777)，不再半透明；亮色系星期一深灰底白字照舊 */
+body table.road td.wd .badge:not(.mon){ color:#555; }
+body table.road tr.future td.wd .badge{ opacity:1; }
+body table.road tr.future td.wd .badge:not(.mon){ color:#555; }
+body.theme-dark table.road td.wd .badge, body.theme-dark table.road td.wd.mon-cell .badge.mon{ color:#9a9a9a; }
+body.theme-dark table.road tr.future td.wd .badge, body.theme-dark table.road tr.future td.wd.mon-cell .badge.mon{ color:#777; }
   body.theme-dark table.road td.num:not([style*="background"]){ background:#1a1a1a; }
   body.theme-dark table.road td.num.special:not([style*="background"]){ background:#262626; }
   body.theme-dark table.road td.num.pending{ color:#555; }
