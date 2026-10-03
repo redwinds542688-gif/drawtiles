@@ -2054,8 +2054,12 @@ IndexedDB也有一份備份(loadLotteryLocalDBIntoEmbedded等函式)
   body.theme-dark table.road td.day{ color:#9a9a9a; }
   body.theme-dark table.road td.day.first-of-month{ color:#7aa7ff; }
   body.theme-dark table.road tr.future td.day{ color:#777; }
-  body.theme-dark table.road td.wd{ background:#2e2e2e; color:#ddd; }
-  body.theme-dark table.road td.wd.mon-cell, body.theme-dark table.road td.wd.mon-cell .badge.mon{ background:#8a8a8a; color:#111; }
+  /* 2026-10-03 使用者指示「暗色系星期部分一律黑底白字，跟號碼一樣，不要反白」(同抓539／Ai抓牌 10:19 的修改)：星期格底色同號碼格 #1a1a1a，徽章透明底、字色同號碼 #e6e6e6 */
+body.theme-dark table.road td.wd{ background:#1a1a1a; color:#e6e6e6; }
+body.theme-dark table.road td.wd .badge{ background:transparent; color:#e6e6e6; }
+  /* 星期一：格子用較深的黑 #0d0d0d 當分隔(同抓539)，徽章透明底白字 */
+body.theme-dark table.road td.wd.mon-cell{ background:#0d0d0d; color:#e6e6e6; }
+body.theme-dark table.road td.wd.mon-cell .badge.mon{ background:transparent; color:#e6e6e6; }
   body.theme-dark table.road td.num:not([style*="background"]){ background:#1a1a1a; }
   body.theme-dark table.road td.num.special:not([style*="background"]){ background:#262626; }
   body.theme-dark table.road td.num.pending{ color:#555; }
